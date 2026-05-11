@@ -1,113 +1,118 @@
 # Observatório de Projetos Integradores
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)
-![Linguagem](https://img.shields.io/badge/Python-3.x-blue)
-![Faculdade](https://img.shields.io/badge/SENAC-ADS--2%C2%BA%20M%C3%B3dulo-orange)
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green)
+![Faculdade](https://img.shields.io/badge/SENAC-ADS-orange)
 
-Este repositório contém o desenvolvimento do **Observatório de Projetos Integradores**, uma plataforma web centralizada projetada para organizar a submissão, avaliação e consulta de projetos acadêmicos do curso de Análise e Desenvolvimento de Sistemas (ADS) do SENAC.
-
----
-
-## 🇧🇷 Português
-
-### 📝 Descrição do Sistema
-O projeto surge como uma solução para a descentralização no envio de Projetos Integradores (PIs). Atualmente, a dependência de e-mails e plataformas genéricas causa perda de documentos, dificuldade no controle de versões e alto tempo gasto na organização manual por parte dos professores e coordenação. O sistema centraliza todo esse fluxo em um ambiente seguro e organizado.
-
-### 🎯 Objetivos
-* **Centralização:** Unificar a submissão e o armazenamento de todos os trabalhos em um único local.
-* **Avaliação Integrada:** Permitir que professores avaliem os projetos diretamente na plataforma através de rubricas acadêmicas.
-* **Gestão Estratégica:** Oferecer aos coordenadores uma visão gerencial do progresso das turmas.
-* **Vitrine de Talentos:** Funcionar como um portfólio digital, permitindo que empresas parceiras visualizem projetos e identifiquem potenciais talentos para recrutamento.
-
-### 🛠 Tecnologias Utilizadas
-* **Backend:** Python com FastAPI (Performance e documentação Swagger automática).
-* **Banco de Dados:** SQLite com SQLAlchemy ORM.
-* **Frontend:** Jinja2 Templates e Bootstrap 5 para responsividade.
-* **Segurança:** Autenticação JWT (JSON Web Token) e criptografia de senhas com bcrypt.
-* **Versionamento:** Git e GitHub.
-
-### 💼 Regras de Negócio
-* **Níveis de Acesso (RBAC):** Perfis distintos para Aluno, Professor e Administrador (Coordenador).
-* **Gestão de Usuários:** Cadastro restrito ao perfil de Administrador.
-* **Privacidade:** Alunos acessam apenas seus próprios projetos; a edição/exclusão é bloqueada após a avaliação.
-* **Fluxo de Avaliação:** Registros de notas baseados em rubricas com auditoria de data e professor responsável.
-* **Visibilidade Externa:** Projetos são exibidos para empresas parceiras somente após aprovação docente.
-
-### 👥 Equipe do Projeto
-* Edson Aguiar
-* Evencio Neto
-* Estevão Enoque
-* Igor Barbosa
-* Paulo Coutinho
-
-### 🚀 Como Executar o Projeto
-1.  Clone este repositório:
-    ```bash
-    git clone [https://github.com/EdsonAguiar888/Observatorio_de_Projetos_Integradores.git](https://github.com/EdsonAguiar888/Observatorio_de_Projetos_Integradores.git)
-    ```
-2.  Navegue até o diretório do projeto:
-    ```bash
-    cd Observatorio_de_Projetos_Integradores
-    ```
-3.  Instale as dependências (se necessário) e execute o arquivo principal:
-    ```bash
-    python app.py
-    ```
-
-### 📄 Documentação
-A documentação técnica detalhada, incluindo Análise de Requisitos, Diagramas ER e conformidade com a LGPD, está disponível na raiz deste repositório..
+Plataforma web para centralizar a submissão, avaliação e consulta dos Projetos Integradores do curso de Análise e Desenvolvimento de Sistemas (ADS) do SENAC.
 
 ---
 
-## 🇺🇸 English
+## Descrição
 
-### 📝 System Description
-This project is a solution for the decentralization of Integrative Project (PI) submissions. Currently, relying on emails and generic platforms leads to document loss, version control issues, and significant time spent by teachers and coordinators on manual organization. The system centralizes this entire workflow in a secure and organized environment.
+O sistema resolve a descentralização no envio de Projetos Integradores. A dependência de e-mails e plataformas genéricas causa perda de documentos, dificuldade no controle de versões e alto tempo gasto na organização manual. O Observatório PI centraliza todo esse fluxo em um ambiente seguro e organizado.
 
-### 🎯 Objectives
-* **Centralization:** Unify the submission and storage of all works in a single location.
-* **Integrated Evaluation:** Enable teachers to evaluate projects directly on the platform using academic rubrics.
-* **Strategic Management:** Provide coordinators with a managerial view of class progress.
-* **Talent Showcase:** Act as a digital portfolio, allowing partner companies to view projects and identify potential talents for recruitment.
+## Funcionalidades
 
-### 🛠 Technologies Used
-* **Backend:** Python with FastAPI (Performance and automatic Swagger documentation).
-* **Database:** SQLite with SQLAlchemy ORM.
-* **Frontend:** Jinja2 Templates and Bootstrap 5 for responsiveness.
-* **Security:** JWT (JSON Web Token) authentication and bcrypt password encryption.
-* **Versioning:** Git and GitHub.
+- **Alunos** — submetem e acompanham seus projetos
+- **Professores** — avaliam projetos e registram notas
+- **Coordenação** — acompanha o processo e extrai relatórios
+- **Empresas** — visualizam projetos e perfis de alunos (banco de talentos)
 
-### 💼 Business Rules
-* **Access Control (RBAC):** Distinct profiles for Student, Teacher, and Administrator (Coordinator).
+## Tecnologias
 
-* **User Management:** Registration is restricted to the Administrator profile.
+| Camada | Tecnologia |
+|---|---|
+| Backend | Python 3.13 + FastAPI |
+| Banco de dados | SQLite + SQLAlchemy 2.x |
+| Frontend | Jinja2 + Bootstrap 5 |
+| Autenticação | JWT (python-jose) + bcrypt |
 
-* **Privacy:** Students access only their own projects; editing/deletion is blocked after evaluation.
+## Como executar
 
-* **Evaluation Workflow:** Grade records based on rubrics with date and responsible teacher auditing.
+### Pré-requisitos
 
-* **External Visibility:** Projects are displayed to partner companies only after teacher approval.
+- Python 3.11 ou superior
+- Git
 
-### 👥 Project Team
-* Edson Aguiar
-* Evencio Neto
-* Estevão Enoque
-* Igor Barbosa
-* Paulo Coutinho
+### 1. Clone o repositório
 
-### 🚀 How to Run the Project
-1.  Clone this repository:
-    ```bash
-    git clone [https://github.com/EdsonAguiar888/Observatorio_de_Projetos_Integradores.git](https://github.com/EdsonAguiar888/Observatorio_de_Projetos_Integradores.git)
-    ```
-2.  Navigate to the project directory:
-    ```bash
-    cd Observatorio_de_Projetos_Integradores
-    ```
-3.  Install dependencies (if necessary) and run the main file:
-    ```bash
-    python app.py
-    ```
+```bash
+git clone https://github.com/EdsonAguiar888/Observatorio_de_Projetos_Integradores.git
+cd Observatorio_de_Projetos_Integradores
+```
 
-### 📄 Documentation
-Full technical documentation, including Requirements Analysis, ER Diagrams, and LGPD compliance, is available in the root of this repository.
+### 2. Crie e ative o ambiente virtual
+
+```bash
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+# Linux / macOS
+source .venv/bin/activate
+```
+
+### 3. Instale as dependências
+
+```bash
+pip install -r observatorio_pi/requirements.txt
+```
+
+### 4. Execute o projeto
+
+```bash
+python run.py
+```
+
+O script cria o banco de dados, aplica migrações e sobe o servidor automaticamente.  
+Acesse em: **http://127.0.0.1:8000**
+
+> **Windows:** você também pode dar duplo clique em `iniciar.bat`.
+
+### Credenciais iniciais
+
+| Campo | Valor |
+|---|---|
+| E-mail | `admin@observatorio.pi` |
+| Senha | `admin1234` |
+
+> Altere a senha após o primeiro login.
+
+## Variáveis de ambiente (opcional)
+
+| Variável | Descrição | Padrão |
+|---|---|---|
+| `SECRET_KEY` | Chave secreta para assinar os tokens JWT | `observatorio_secret_key_dev_only` |
+
+Em produção, defina `SECRET_KEY` com um valor longo e aleatório.
+
+## Estrutura do projeto
+
+```
+Observatorio_de_Projetos_Integradores/
+├── run.py                        # Ponto de entrada
+├── iniciar.bat                   # Atalho Windows
+├── observatorio_pi/
+│   ├── requirements.txt
+│   └── app/
+│       ├── main.py               # Rotas da interface web
+│       ├── database.py           # Configuração do banco
+│       ├── core/
+│       │   ├── config.py         # Configurações gerais
+│       │   └── security.py       # JWT e bcrypt
+│       ├── models/               # Modelos SQLAlchemy
+│       ├── routers/              # Routers da API REST
+│       ├── schemas/              # Schemas Pydantic
+│       └── templates/            # Templates HTML (Jinja2)
+```
+
+## Equipe
+
+- Edson Aguiar
+- Evencio Neto
+- Estevão Enoque
+- Igor Barbosa
+- Paulo Coutinho
