@@ -15,21 +15,23 @@ O projeto surge como uma solução para a descentralização no envio de Projeto
 
 ### 🎯 Objetivos
 * **Centralização:** Unificar a submissão e o armazenamento de todos os trabalhos em um único local.
-* **Avaliação Eficiente:** Permitir que professores avaliem os projetos diretamente na plataforma através de rubricas.
+* **Avaliação Integrada:** Permitir que professores avaliem os projetos diretamente na plataforma através de rubricas acadêmicas.
+* **Gestão Estratégica:** Oferecer aos coordenadores uma visão gerencial do progresso das turmas.
 * **Vitrine de Talentos:** Funcionar como um portfólio digital, permitindo que empresas parceiras visualizem projetos e identifiquem potenciais talentos para recrutamento.
 
 ### 🛠 Tecnologias Utilizadas
-* **Linguagem Principal:** Python
-* **Frontend:** HTML5, CSS3
-* **Versionamento:** Git e GitHub
-* **Gestão de Projeto:** Trello
+* **Backend:** Python com FastAPI (Performance e documentação Swagger automática).
+* **Banco de Dados:** SQLite com SQLAlchemy ORM.
+* **Frontend:** Jinja2 Templates e Bootstrap 5 para responsividade.
+* **Segurança:** Autenticação JWT (JSON Web Token) e criptografia de senhas com bcrypt.
+* **Versionamento:** Git e GitHub.
 
 ### 💼 Regras de Negócio
-* **Autenticação:** O acesso é restrito apenas a usuários cadastrados e logados.
-* **Gestão de Usuários:** O cadastro de novos usuários é uma funcionalidade exclusiva do Administrador (Coordenador).
-* **Painel do Aluno (CRUD):** Alunos podem submeter, visualizar, editar e excluir seus próprios projetos integradores.
-* **Painel do Professor:** Permite filtrar projetos por turma e realizar avaliações utilizando rubricas pré-definidas.
-* **Acesso para Empresas:** Empresas parceiras possuem um módulo de visualização para consulta de projetos e talentos.
+* **Níveis de Acesso (RBAC):** Perfis distintos para Aluno, Professor e Administrador (Coordenador).
+* **Gestão de Usuários:** Cadastro restrito ao perfil de Administrador.
+* **Privacidade:** Alunos acessam apenas seus próprios projetos; a edição/exclusão é bloqueada após a avaliação.
+* **Fluxo de Avaliação:** Registros de notas baseados em rubricas com auditoria de data e professor responsável.
+* **Visibilidade Externa:** Projetos são exibidos para empresas parceiras somente após aprovação docente.
 
 ### 👥 Equipe do Projeto
 * Edson Aguiar
@@ -53,7 +55,7 @@ O projeto surge como uma solução para a descentralização no envio de Projeto
     ```
 
 ### 📄 Documentação
-O link para a documentação técnica completa, incluindo requisitos e modelagem, pode ser encontrado aqui: [LINK DA DOCUMENTAÇÃO].
+A documentação técnica detalhada, incluindo Análise de Requisitos, Diagramas ER e conformidade com a LGPD, está disponível na raiz deste repositório..
 
 ---
 
@@ -64,21 +66,27 @@ This project is a solution for the decentralization of Integrative Project (PI) 
 
 ### 🎯 Objectives
 * **Centralization:** Unify the submission and storage of all works in a single location.
-* **Efficient Evaluation:** Enable teachers to evaluate projects directly on the platform using rubrics.
+* **Integrated Evaluation:** Enable teachers to evaluate projects directly on the platform using academic rubrics.
+* **Strategic Management:** Provide coordinators with a managerial view of class progress.
 * **Talent Showcase:** Act as a digital portfolio, allowing partner companies to view projects and identify potential talents for recruitment.
 
 ### 🛠 Technologies Used
-* **Primary Language:** Python
-* **Frontend:** HTML5, CSS3
-* **Versioning:** Git and GitHub
-* **Project Management:** Trello
+* **Backend:** Python with FastAPI (Performance and automatic Swagger documentation).
+* **Database:** SQLite with SQLAlchemy ORM.
+* **Frontend:** Jinja2 Templates and Bootstrap 5 for responsiveness.
+* **Security:** JWT (JSON Web Token) authentication and bcrypt password encryption.
+* **Versioning:** Git and GitHub.
 
 ### 💼 Business Rules
-* **Authentication:** Access is restricted to registered and logged-in users only.
-* **User Management:** Registering new users is an exclusive feature of the Administrator (Coordinator).
-* **Student Panel (CRUD):** Students can submit, view, edit, and delete their own integrative projects.
-* **Teacher Panel:** Allows filtering projects by class and performing evaluations using predefined rubrics.
-* **Company Access:** Partner companies have a viewing module to consult projects and talents.
+* **Access Control (RBAC):** Distinct profiles for Student, Teacher, and Administrator (Coordinator).
+
+* **User Management:** Registration is restricted to the Administrator profile.
+
+* **Privacy:** Students access only their own projects; editing/deletion is blocked after evaluation.
+
+* **Evaluation Workflow:** Grade records based on rubrics with date and responsible teacher auditing.
+
+* **External Visibility:** Projects are displayed to partner companies only after teacher approval.
 
 ### 👥 Project Team
 * Edson Aguiar
@@ -102,4 +110,4 @@ This project is a solution for the decentralization of Integrative Project (PI) 
     ```
 
 ### 📄 Documentation
-The link to the full technical documentation, including requirements and modeling, can be found here: [DOCUMENTATION LINK].
+Full technical documentation, including Requirements Analysis, ER Diagrams, and LGPD compliance, is available in the root of this repository.
